@@ -1,4 +1,4 @@
-package clientAndFiles;
+package chessPieces;
 
 import com.sun.j3d.loaders.Scene;
 import com.sun.j3d.loaders.objectfile.ObjectFile;
@@ -247,7 +247,7 @@ public class Knight extends ChessPieces {
 		ObjectFile f = new ObjectFile(ObjectFile.RESIZE);
 		Scene s = null;
 		try {
-			s = f.load("Knight.obj");
+			s = f.load("Assets/Knight.obj");
 
 			tgPiece.addChild(s.getSceneGroup());
 		} catch (Exception e) {

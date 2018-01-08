@@ -1,4 +1,4 @@
-package clientAndFiles;
+package chessPieces;
 
 import java.io.FileNotFoundException;
 import java.util.Enumeration;
@@ -336,7 +336,7 @@ public class Pawn extends ChessPieces {
 		ObjectFile f = new ObjectFile(ObjectFile.RESIZE);
 		Scene s = null;
 		try {
-			s = f.load("pawnFirstAttempt.obj");
+			s = f.load("Assets/pawnFirstAttempt.obj");
 
 			tgPiece.addChild(s.getSceneGroup());
 		} catch (Exception e) {

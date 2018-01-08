@@ -1,4 +1,4 @@
-package clientAndFiles;
+package chessPieces;
 
 import java.util.Enumeration;
 import java.util.Hashtable;
@@ -332,7 +332,7 @@ public class Rook extends ChessPieces {
 				ObjectFile f = new ObjectFile(ObjectFile.RESIZE);
 				Scene s = null;
 				try {
-					s = f.load("Rook.obj");
+					s = f.load("Assets/Rook.obj");
 
 					tgPiece.addChild(s.getSceneGroup());
 				} catch (Exception e) {

@@ -1,4 +1,4 @@
-package clientAndFiles;
+package chessPieces;
 
 import com.sun.j3d.loaders.Scene;
 import com.sun.j3d.loaders.objectfile.ObjectFile;
@@ -19,16 +19,12 @@ public class Bishop extends ChessPieces {
 		// Create a transformation group tgPiece which is a correctly positioned
 		// piece on the origin
 
-	
-		try{
-		loadObject();
-		}
-		catch(Exception e) {
+		try {
+			loadObject();
+		} catch (Exception e) {
 			loadLocal();
 		}
-		
-		
-		
+
 		TransformGroup tgmPieceHop = new TransformGroup();
 		tgmPieceHop.setCapability(TransformGroup.ALLOW_TRANSFORM_WRITE);
 		tgmPieceHop.addChild(tgPiece);
@@ -266,8 +262,7 @@ public class Bishop extends ChessPieces {
 		}
 
 		/*
-		 * s.println("THE UPDATED MOVE LOGIC BOARD IS THE FOLLOWING: "
-		 * );
+		 * s.println("THE UPDATED MOVE LOGIC BOARD IS THE FOLLOWING: " );
 		 * 
 		 * for (int x = 0; x < 8; x++) { for (int y = 0; y < 8; y++) {
 		 * System.out.print(moveLogic[x][y] + " "); } System.out.println(); }
@@ -323,12 +318,12 @@ public class Bishop extends ChessPieces {
 
 		fixOrientation.mul(putOnBoard, fixOrientation);
 
-tgPiece = new TransformGroup(fixOrientation);
-		
+		tgPiece = new TransformGroup(fixOrientation);
+
 		ObjectFile f = new ObjectFile(ObjectFile.RESIZE);
 		Scene s = null;
 		try {
-			s = f.load("Bishop.obj");
+			s = f.load("Assets/Bishop.obj");
 
 			tgPiece.addChild(s.getSceneGroup());
 		} catch (Exception e) {
@@ -351,6 +346,7 @@ tgPiece = new TransformGroup(fixOrientation);
 			parts.setAppearance(ChessPieces.blackApp);
 
 	}
+
 	public void loadLocal() {
 		Box bottom = new Box(0.3f, 0.3f, 0.3f, getColor(isWhite));
 		Box top = new Box(0.1f, 0.1f, 0.1f, getColor(isWhite));
@@ -362,7 +358,6 @@ tgPiece = new TransformGroup(fixOrientation);
 		TransformGroup tgTop = new TransformGroup(tftop);
 		tgTop.addChild(top);
 
-		
 		tgPiece.addChild(tgTop);
 		tgPiece.addChild(bottom);
 	}

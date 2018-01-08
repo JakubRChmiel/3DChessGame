@@ -32,6 +32,13 @@ import com.sun.j3d.utils.geometry.Box;
 import com.sun.j3d.utils.geometry.Sphere;
 import com.sun.j3d.utils.universe.SimpleUniverse;
 
+import chessPieces.Bishop;
+import chessPieces.ChessPieces;
+import chessPieces.King;
+import chessPieces.Knight;
+import chessPieces.Pawn;
+import chessPieces.Queen;
+import chessPieces.Rook;
 import sun.audio.AudioPlayer;
 import sun.audio.AudioStream;
 
@@ -42,11 +49,6 @@ public class Chess3DGameClient extends JFrame {
 	 * 
 	 * Full defines all logic of game regarding check, checkmate, legal moves
 	 * etc.
-	 * 
-	 * Current Objectives: Full define pawn moves entailing:
-	 * 
-	 * When piece is allowed to capture Transform/ procedure for piece getting
-	 * captured Setting all move logic after each move
 	 * 
 	 */
 
@@ -105,6 +107,11 @@ public class Chess3DGameClient extends JFrame {
 	public static Link[][] squareLinks;
 
 	public Chess3DGameClient() {
+		
+		/**
+		 * Constructor used to initialize game window
+		 * Creates Scene
+		 */
 
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
@@ -146,6 +153,9 @@ public class Chess3DGameClient extends JFrame {
 
 	public static void createSceneGraph(SimpleUniverse su) {
 
+		
+		
+		
 		// Create the bs cuz you need it everywhere
 		bs = new BoundingSphere(new Point3d(0.0, 0.0, 0.0), Double.MAX_VALUE);
 		// Create a transform group that can all be moved

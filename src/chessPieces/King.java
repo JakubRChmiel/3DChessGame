@@ -1,4 +1,4 @@
-package clientAndFiles;
+package chessPieces;
 
 import java.util.Enumeration;
 import java.util.Hashtable;
@@ -375,7 +375,7 @@ public class King extends ChessPieces {
 		ObjectFile f = new ObjectFile(ObjectFile.RESIZE);
 		Scene s = null;
 		try {
-			s = f.load("King.obj");
+			s = f.load("Assets/King.obj");
 
 			tgPiece.addChild(s.getSceneGroup());
 		} catch (Exception e) {

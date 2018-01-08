@@ -216,7 +216,7 @@ public class PickingSquare extends PickMouseBehavior {
 						// JOptionPane.showMessageDialog(null, "check");
 
 						try {
-							String wav_file = "C:/Users/jakub/Documents/Java/ChessBoard3DActive/check.wav";
+							String wav_file = "Assets/check.wav";
 							InputStream in = new FileInputStream(wav_file);
 
 							AudioStream audio = new AudioStream(in);

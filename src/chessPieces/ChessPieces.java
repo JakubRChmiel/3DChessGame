@@ -1,4 +1,4 @@
-package clientAndFiles;
+package chessPieces;
 
 import javax.media.j3d.Alpha;
 import javax.media.j3d.Appearance;
@@ -18,7 +18,7 @@ public abstract class ChessPieces {
 	protected static Appearance whiteApp;
 	protected static Appearance blackApp;
 	protected static Color3f white, black, weakWhite, weakBlack;
-	protected boolean isWhite;
+	public boolean isWhite;
 	protected boolean isKing;
 	protected boolean isCaptured;
 	protected Transform3D fixOrientation;
